@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- v-for directive is a Vue. All directives start with the V,followed by the name of the directive. -->
+
+    <div id="app" v-cloak>
+      <p>{{ fullName() }}</p>
+      <p><a v-bind:href="url" target="_blank">Google</a></p>
+      <p v-html="raw_url"></p>
+      <p>{{ age }}</p>
+
+      <hr />
+
+      <label for="">First Name</label>
+      <input type="text" name="" id="" v-model="firstName" />
+
+      <label for="">Last Name</label>
+      <input type="text" name="" id="" v-model="lastName" />
+
+      <button type="button" v-on:click="increment">Increment</button>
+      <button type="button" v-on:click="age--">Decrement</button>
+    </div>
+
+    <!-- <div class="app">{{ firstName }} {{ lastName }}</div> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
