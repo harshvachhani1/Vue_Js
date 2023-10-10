@@ -15,17 +15,38 @@ const vm = Vue.createApp({
     return {
       firstName: "raj",
       lastName: "mehta",
+      city: "",
       url: "https://google.com",
       raw_url: '<a href="https://google.com" target="_blank">Google</a>',
       age: 20,
     };
   },
   methods: {
-    fullName() {
-      return `${this.firstName} ${this.lastName}`;
-    },
     increment() {
       this.age++;
+    },
+    updateLastName(msg, event) {
+      // event.preventDefault();
+      console.log(msg);
+      this.lastName = event.target.value;
+    },
+    updateCityName(event) {
+      this.city = event.target.value;
+    },
+  },
+  computed: {
+    fullName() {
+      console.log(`computed property call`);
+      return `${this.firstName} ${this.lastName} ${this.city}`;
+    },
+  },
+  watch: {
+    age(newValue, oldValue) {
+      setTimeout(() => {
+        this.age = 30;
+      }, 2000);
+      // console.log(newValue);
+      // console.log(oldValue);
     },
   },
   // Mount the first Vue instance
