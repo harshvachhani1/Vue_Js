@@ -7,7 +7,7 @@ let vm = Vue.createApp({
     };
   },
   computed: {
-    circle_classes() {
+    circleClasses() {
       return { purple: this.isPurple };
     },
   },
