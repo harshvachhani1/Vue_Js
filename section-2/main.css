@@ -1,0 +1,69 @@
+body {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+label {
+  margin-bottom: 20px;
+  font-size: 20px;
+  display: block;
+}
+select {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+input[type="number"] {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-color: lightblue;
+  text-align: center;
+  color: #fff;
+  line-height: 150px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.purple {
+  animation: colorChange 20s infinite;
+}
+.text-black {
+  color: #424242;
+}
+.text-orange {
+  color: #ffc26f;
+}
+.text-blue {
+  color: #023047;
+}
+
+.dropdown {
+  width: 150px;
+  border-radius: 30px;
+}
+
+@keyframes colorChange {
+  0% {
+    background: #8ebf42;
+  }
+  25% {
+    background: #e6ebef;
+  }
+  50% {
+    background: #1c87c9;
+  }
+  75% {
+    background: #095484;
+  }
+  100% {
+    background: #d0e2bc;
+  }
+}
+/* button {
+  display: inline;
+  margin-bottom: 20px;
+} */
