@@ -1,0 +1,18 @@
+// We can set this rule to off to prevent the rule from being applied to our code base.
+// { "rules": { "quotes": "off" } }
+
+//The second possible value is worn is lent can cause our project not to be built.We must address the issues thrown by its length before building our project.
+// { "rules": { "quotes": "warn" } }
+
+{
+  "rules": {
+    "quotes": "error"
+  },
+  "env": {
+    "broeswer": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  }
+}
