@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <h1 v-if="mode == 1">Select Your Review</h1>
+      <!-- <p>Lorem ipsum dolor sit amet.</p> not write like this otherwise show error beacuse condition chain break -->
+      <template v-else-if="mode == 2">
+        <h3>Thank you for feedback</h3>
+        <p>Please visit again.</p>
+      </template>
+      <h2 v-else-if="mode == 3">Great Nice feedback</h2>
+      <p v-else>Thank you</p>
+
+      <p v-show="mode == 1">Hello!</p>
+      <select v-model="mode">
+        <option value="1">Select below option</option>
+        <option value="2">Happy</option>
+        <option value="3">Excellent</option>
+        <option value="">Good Work</option>
+      </select>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
