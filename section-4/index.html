@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <!-- <li v-for="value in dataProperty"></li> -->
+        <li v-for="(bird, index) in birds" :class="bird" :key="bird">
+          {{ bird }} - {{ index }}
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li v-for="person in people">
+          <!-- <div>{{ person.name }} {{ person.age }}</div> -->
+          <div v-for="(value,key, index) in person">
+            {{ key }} - {{ value }}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
